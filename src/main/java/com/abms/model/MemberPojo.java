@@ -1,33 +1,26 @@
 package com.abms.model;
 
-import java.sql.Date;
 
 public class MemberPojo {
 	
-	private String MemberId; 
-	private String MemberName;
-	private Date MemberDate;
+	private String Memb_id; 
+	private String Memb_name;
 	private String Address;
-	private String MemberType;
-	private Date ExpiryDate;
+	private String Memb_type;
+	private String Memb_date;
+	private String Expiry_date;
 	
-	public String getMemberId() {
-		return MemberId;
+	public String getMemb_id() {
+		return Memb_id;
 	}
-	public void setMemberId(String memberId) {
-		MemberId = memberId;
+	public void setMemb_id(String memb_id) {
+		Memb_id = memb_id;
 	}
-	public String getMemberName() {
-		return MemberName;
+	public String getMemb_name() {
+		return Memb_name;
 	}
-	public void setMemberName(String memberName) {
-		MemberName = memberName;
-	}
-	public Date getMemberDate() {
-		return MemberDate;
-	}
-	public void setMemberDate(Date memberDate) {
-		MemberDate = memberDate;
+	public void setMemb_name(String memb_name) {
+		Memb_name = memb_name;
 	}
 	public String getAddress() {
 		return Address;
@@ -35,16 +28,25 @@ public class MemberPojo {
 	public void setAddress(String address) {
 		Address = address;
 	}
-	public String getMemberType() {
-		return MemberType;
+	public String getMemb_type() {
+		return Memb_type;
 	}
-	public void setMemberType(String memberType) {
-		MemberType = memberType;
+	public void setMemb_type(String memb_type) {
+		Memb_type = memb_type;
 	}
-	public Date getExpiryDate() {
-		return ExpiryDate;
+	public String getMemb_date() {
+		return Memb_date;
 	}
-	public void setExpiryDate(Date expiryDate) {
-		ExpiryDate = expiryDate;
+	public void setMemb_date(String memberdate) {
+		Memb_date = memberdate;
 	}
+	public String getExpiry_date() {
+		return Expiry_date;
+	}
+	public void setExpiry_date(String expiry_date) {
+		Expiry_date = expiry_date;
+	}
+	
+	
+	
 }
