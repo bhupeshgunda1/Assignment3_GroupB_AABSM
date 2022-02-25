@@ -12,15 +12,15 @@
 <h1> Book updation Page </h1>
 <!--JSP for Book updation in Database--> 
 
- <form action="<%= request.getContextPath() %>/MemberServlet" method="post">
+ <form action="<%= request.getContextPath() %>/MemberServ" method="post">
    <table style="with: 80%">
-    <tr>
-     <td>Name</td>
-     <td><input type="text" name="name" /></td>
-    </tr>
     <tr>
      <td>Member ID</td>
      <td><input type="text" name="id" /></td>
+    </tr>
+    <tr>
+     <td>Name</td>
+     <td><input type="text" name="name" /></td>
     </tr>
     <tr>
      <td>Address</td>
@@ -39,7 +39,7 @@
      <td><input type="text" name="expirydate" /></td>
     </tr>
     </table>
-   <input type="submit" value="Add Member" />
+   <input type="submit" value="Register Member" />
   </form>
 </div>
 </body>
