@@ -35,7 +35,7 @@
      <td><input type="text" name="available" /></td>
     </tr>
     </table>
-   <input type="submit" value="Insert Book" />
+   <input type="submit" value="Issue Book" />
   </form>
 </div>
 </body>
