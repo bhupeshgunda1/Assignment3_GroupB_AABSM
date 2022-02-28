@@ -9,7 +9,7 @@
 <body>
 
 <div align="center">
-<h1> Book updation Page </h1>
+<h1> Member Registration Page </h1>
 <!--JSP for Book updation in Database--> 
 
  <form action="<%= request.getContextPath() %>/MemberServ" method="post">
