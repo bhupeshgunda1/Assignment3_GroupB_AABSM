@@ -12,12 +12,8 @@
 <h1> Book updation Page </h1>
 <!--JSP for Publisher addition/updation in Database--> 
 
- <form action="<%= request.getContextPath() %>/PublisherServlet" method="post">
+ <form action="<%= request.getContextPath() %>/PublisherServ" method="post">
    <table style="with: 80%">
-    <tr>
-     <td>Publisher Name</td>
-     <td><input type="text" name="pub_name" /></td>
-    </tr>
     <tr>
      <td>Publisher ID</td>
      <td><input type="text" name="pub_id" /></td>
@@ -25,6 +21,10 @@
     <tr>
      <td>Publisher Address</td>
      <td><input type="text" name="pub_address" /></td>
+    </tr>
+    <tr>
+     <td>Publisher Name</td>
+     <td><input type="text" name="pub_name" /></td>
     </tr>
     </table>
    <input type="submit" value="Add Publisher" />
