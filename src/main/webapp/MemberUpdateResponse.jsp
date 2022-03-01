@@ -24,6 +24,6 @@ body {font-family: "Lato", sans-serif}
     
   </div>
 </div><br><br>
-<h1> Member Registered Successfully</h1>
+<h1> Member Updated Successfully</h1>
 </body>
 </html>

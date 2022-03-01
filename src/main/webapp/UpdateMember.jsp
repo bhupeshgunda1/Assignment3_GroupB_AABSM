@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Book Insertion</title>
+<title>Update Member</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -23,16 +23,16 @@ body {font-family: "Lato", sans-serif}
   <div class="w3-bar w3-black w3-card">
     <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
     <a href="index.jsp" class="w3-bar-item w3-button w3-padding-large">HOME</a>
-    <a href="UpdateMember.jsp" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Update Member</a>
+    <a href="MemberRegistration.jsp" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Add Member</a>
     <a href="DeleteMember.jsp" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Delete Member</a>   
   </div>
 </div>
 <br><br>
 <div align="center">
-<h1> Member </h1>
-<!--JSP for Book updation in Database--> 
+<h1>Update Member </h1>
+<!--JSP for Member updation in Database--> 
 
- <form action="<%= request.getContextPath() %>/MemberServ" method="post">
+ <form action="<%= request.getContextPath() %>/MemberUpdate" method="post">
    <table style="with: 80%">
     <tr>
      <td>Member ID</td>
@@ -59,7 +59,7 @@ body {font-family: "Lato", sans-serif}
      <td><input type="text" name="expirydate" /></td>
     </tr>
     </table>
-   <input type="submit" value="Register Member" />
+   <input type="submit" value="Update Member" />
   </form>
 </div>
 </body>

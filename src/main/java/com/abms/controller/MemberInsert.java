@@ -15,13 +15,13 @@ import com.abms.model.MemberPojo;
  * Servlet implementation class MemberServlet
  */
 @WebServlet("/MemberServ")
-public class MemberServlet extends HttpServlet {
+public class MemberInsert extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	MemberDaoClass_grpB memberdao = new MemberDaoClass_grpB();
     /**
      * Default constructor. 
      */
-    public MemberServlet() {
+    public MemberInsert() {
         // TODO Auto-generated constructor stub
     }
     private MemberDaoClass_grpB mdao;
