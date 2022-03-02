@@ -24,6 +24,6 @@ body {font-family: "Lato", sans-serif}
     
   </div>
 </div><br><br>
-<h1> Book Added Successfully</h1>
+<h1> Book Updated Successfully</h1>
 </body>
 </html>

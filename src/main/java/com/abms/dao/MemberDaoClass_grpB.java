@@ -15,7 +15,7 @@ public class MemberDaoClass_grpB {
 					"(?,?,?,?,?,?);";
 			int result = 0;
 			Class.forName("com.mysql.cj.jdbc.Driver");	
-			try(Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/week5", "root", "happiness");
+			try(Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/week5", "root", "1234");
 			PreparedStatement ps = connection.prepareStatement(INSERT_MEMBER_SQL))
 			{
 				ps.setString(1, mp.getMemb_id());
@@ -39,7 +39,7 @@ public class MemberDaoClass_grpB {
 					+ "WHERE Memb_id=?";
 			int result = 0;
 			Class.forName("com.mysql.cj.jdbc.Driver");	
-			try(Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/week5", "root", "happiness");
+			try(Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/week5", "root", "1234");
 			PreparedStatement ps = connection.prepareStatement(UPDATE_MEMBER_SQL))
 			{
 				ps.setString(1, mm.getMemb_name());
@@ -59,7 +59,7 @@ public class MemberDaoClass_grpB {
 			String DELETE_MEMBER_SQL ="DELETE FROM Member WHERE Memb_id=?";
 			int result = 0;
 			Class.forName("com.mysql.cj.jdbc.Driver");	
-			try(Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/week5", "root", "happiness");
+			try(Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/week5", "root", "1234");
 			PreparedStatement ps = connection.prepareStatement(DELETE_MEMBER_SQL))
 			{
 				ps.setString(1, mm.getMemb_id());

@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Delete Member</title>
+<title>Book Insertion</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -23,23 +23,41 @@ body {font-family: "Lato", sans-serif}
   <div class="w3-bar w3-black w3-card">
     <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
     <a href="index.jsp" class="w3-bar-item w3-button w3-padding-large">HOME</a>
-    <a href="MemberRegistration.jsp" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Add Member</a>
-    <a href="UpdateMember.jsp" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Update Member </a> 
+    <a href="BookRegistration.jsp"  class="w3-bar-item w3-button w3-padding-large w3-hide-small">Add Book</a>
+    <a href="UpdateBook.jsp" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Update Book</a>
+    <a href="DeleteBook.jsp" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Delete Book</a>  
   </div>
 </div>
 <br><br>
 <div align="center">
-<h1> Delete Member </h1>
+<h1> Issue Book  </h1>
 <!--JSP for Book updation in Database--> 
 
- <form action="<%= request.getContextPath() %>/MemberServ" method="post">
+ <form action="<%= request.getContextPath() %>/BookServ" method="post">
    <table style="with: 80%">
     <tr>
-     <td>Member ID</td>
-     <td><input type="text" name="id" /></td>
+     <td>Book ID</td>
+     <td><input type="text" name="bookid"/></td>
     </tr>
+    <tr>
+     <td>Member ID</td>
+     <td><input type="text" name="member_id" /></td>
+    </tr>
+    <tr>
+     <td>Issue Date</td>
+     <td><input type="text" name="member_id" /></td>
+    </tr>
+    <tr>
+     <td>Due Date</td>
+     <td><input type="text" name="member_id" /></td>
+    </tr>
+    <tr>
+     <td>Returned Date</td>
+     <td><input type="text" name="member_id" /></td>
+    </tr>
+    <tr>
     </table>
-   &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;<input type="submit" name = "action" value="Delete Member" />
+    <input type="submit" name="action" value="Issue Book" />
   </form>
 </div>
 </body>

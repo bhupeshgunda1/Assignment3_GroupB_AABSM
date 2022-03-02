@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Member Response</title>
+<title>Publisher Update Response</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -24,6 +24,6 @@ body {font-family: "Lato", sans-serif}
     
   </div>
 </div><br><br>
-<h1> Book Added Successfully</h1>
+<h1> Publisher Updated Successfully</h1>
 </body>
 </html>

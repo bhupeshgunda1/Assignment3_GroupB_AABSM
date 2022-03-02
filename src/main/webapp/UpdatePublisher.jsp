@@ -1,8 +1,10 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Member Response</title>
+<title>Publisher Updation</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -21,9 +23,31 @@ body {font-family: "Lato", sans-serif}
   <div class="w3-bar w3-black w3-card">
     <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
     <a href="index.jsp" class="w3-bar-item w3-button w3-padding-large">HOME</a>
-    
+    <a href="AddPublisher.jsp" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Add Publisher</a>   
   </div>
-</div><br><br>
-<h1> Book Added Successfully</h1>
+</div>
+<br><br>
+<div align="center">
+<h1> Update Publisher  </h1>
+<!--JSP for Publisher updation in Database--> 
+
+ <form action="<%= request.getContextPath() %>/PublisherServ" method="post">
+   <table style="with: 80%">
+    <tr>
+     <td>Publisher ID</td>
+     <td><input type="text" name="pub_id"/></td>
+    </tr>
+    <tr>
+     <td>Publisher Address</td>
+     <td><input type="text" name="pub_address" /></td>
+    </tr>
+    <tr>
+     <td>Publisher Name</td>
+     <td><input type="text" name="pub_name" /></td>
+    </tr>
+    </table>
+    <input type="submit" name="action" value="Update Publisher" />
+  </form>
+</div>
 </body>
 </html>

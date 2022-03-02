@@ -1,8 +1,10 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Member Response</title>
+<title>Book Insertion</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -21,9 +23,27 @@ body {font-family: "Lato", sans-serif}
   <div class="w3-bar w3-black w3-card">
     <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
     <a href="index.jsp" class="w3-bar-item w3-button w3-padding-large">HOME</a>
-    
+    <a href="Book.jsp"  class="w3-bar-item w3-button w3-padding-large w3-hide-small">Issue Book</a>
+    <a href="BookRegistration.jsp" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Add Book</a>
+    <a href="DeleteBook.jsp" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Delete Book</a>   
   </div>
-</div><br><br>
-<h1> Book Added Successfully</h1>
+</div>
+
+
+<div align="center"> <br>
+<h1> Book Deletion Page </h1>
+<!--JSP for Book updation in Database--> 
+
+ <form action="<%= request.getContextPath() %>/BookServ" method="post">
+   <table style="with: 80%">
+    <tr>
+     <td>Book ID</td>
+     <td><input type="text" name="bookid" /></td>
+    </tr>
+   
+    </table>
+   <input type="submit" name = "action" value="Delete Book" />
+  </form>
+</div>
 </body>
 </html>

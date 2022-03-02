@@ -107,7 +107,7 @@ public class MemberServlet extends HttpServlet {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        response.sendRedirect("MemberUpdateResponse.jsp"); //response goes to view!!
+        response.sendRedirect("MemberUpdateResponse.jsp"); //response goes to MemberUpdateResponse view!!
 	}
 	public void deleteMember(HttpServletRequest request, HttpServletResponse response) throws IOException
 	{
