@@ -59,7 +59,7 @@ body {font-family: "Lato", sans-serif}
      <td><input type="text" name="expirydate" /></td>
     </tr>
     </table>
-   <input type="submit" value="Register Member" />
+    <input type="submit" name="action" value="Register Member" />
   </form>
 </div>
 </body>

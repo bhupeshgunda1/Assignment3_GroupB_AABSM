@@ -32,14 +32,14 @@ body {font-family: "Lato", sans-serif}
 <h1> Delete Member </h1>
 <!--JSP for Book updation in Database--> 
 
- <form action="<%= request.getContextPath() %>/MemberDelete" method="post">
+ <form action="<%= request.getContextPath() %>/MemberServ" method="post">
    <table style="with: 80%">
     <tr>
      <td>Member ID</td>
      <td><input type="text" name="id" /></td>
     </tr>
     </table>
-   <input type="submit" value="Delete Member" />
+   <input type="submit" name = "action" value="Delete Member" />
   </form>
 </div>
 </body>

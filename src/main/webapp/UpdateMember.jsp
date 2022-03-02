@@ -32,7 +32,7 @@ body {font-family: "Lato", sans-serif}
 <h1>Update Member </h1>
 <!--JSP for Member updation in Database--> 
 
- <form action="<%= request.getContextPath() %>/MemberUpdate" method="post">
+ <form action="<%= request.getContextPath() %>/MemberServ" method="post">
    <table style="with: 80%">
     <tr>
      <td>Member ID</td>
@@ -59,7 +59,7 @@ body {font-family: "Lato", sans-serif}
      <td><input type="text" name="expirydate" /></td>
     </tr>
     </table>
-   <input type="submit" value="Update Member" />
+   <input type="submit" name= "action" value="Update Member" />
   </form>
 </div>
 </body>
