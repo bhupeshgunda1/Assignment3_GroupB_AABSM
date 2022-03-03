@@ -23,10 +23,10 @@ body {font-family: "Lato", sans-serif}
   <div class="w3-bar w3-black w3-card">
     <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
     <a href="index.jsp" class="w3-bar-item w3-button w3-padding-large">HOME</a>
-    <a href="Book.jsp"  class="w3-bar-item w3-button w3-padding-large w3-hide-small">Issue Book</a>
+    <a href="IssueBook.jsp"  class="w3-bar-item w3-button w3-padding-large w3-hide-small">Issue Book</a>
     <a href="UpdateBook.jsp" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Update Book</a>
     <a href="DeleteBook.jsp" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Delete Book</a>
-       
+    <a href="Borrow.jsp" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Borrow List</a>  
   </div>
 </div>
 <br><br>
@@ -56,7 +56,10 @@ body {font-family: "Lato", sans-serif}
      <td>Available</td>
      <td><input type="text" name="available" /></td>
     </tr>
-    
+    <tr>
+     <td>Publisher Id</td>
+     <td><input type="text" name="publisherId" /></td>
+    </tr>
     </table>
     <input type="submit" name="action" value="Add Book" />
   </form>

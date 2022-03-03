@@ -9,13 +9,14 @@ import com.abms.model.PublisherPojo;
 
 public class PublisherDaoClass_grpB {
 	public int addPublisher(PublisherPojo pp) throws ClassNotFoundException, SQLException {
+		// Method addPublisher() - Database logic is to add a Publisher to the database.
 		{
 			String INSERT_PUBLISHER_SQL ="INSERT INTO Publisher" +
 					"(Pub_id, Address, Pub_Name) VALUES " +
 					"(?,?,?);";
 			int result = 0;
 			Class.forName("com.mysql.cj.jdbc.Driver");	
-			try(Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/week5", "root", "1234");
+			try(Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/week5", "root", "happiness");
 			PreparedStatement ps = connection.prepareStatement(INSERT_PUBLISHER_SQL))
 			{
 				ps.setString(1, pp.getPub_id());
@@ -28,13 +29,14 @@ public class PublisherDaoClass_grpB {
 	}
 	
 	public int updatePublisher(PublisherPojo pp) throws ClassNotFoundException, SQLException {
+		// Method updatePublisher() - Database logic is to update a member to the database.
 		{
 			String UPDATE_PUBLISHER_SQL = "UPDATE Publisher "
-					+ "SET Address=?, Pub_Name=?"
+					+ "SET Address=?, Pub_Name=? "
 					+ "WHERE Pub_id=?";
 			int result = 0;
 			Class.forName("com.mysql.cj.jdbc.Driver");	
-			try(Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/week5", "root", "1234");
+			try(Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/week5", "root", "happiness");
 			PreparedStatement ps = connection.prepareStatement(UPDATE_PUBLISHER_SQL))
 			{
 				ps.setString(1, pp.getAddress());

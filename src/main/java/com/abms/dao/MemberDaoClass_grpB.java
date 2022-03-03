@@ -8,14 +8,15 @@ import java.sql.SQLException;
 import com.abms.model.MemberPojo;
 
 public class MemberDaoClass_grpB {
-	public int membereg(MemberPojo mp) throws ClassNotFoundException, SQLException {
+	public int membeReg(MemberPojo mp) throws ClassNotFoundException, SQLException {
+		// Method membereg() - Database logic is to add a member to the database.
 		{
 			String INSERT_MEMBER_SQL ="INSERT INTO Member" +
 					"(Memb_id, Memb_name, Address, Memb_type, Memb_date, Expiry_date) VALUES " +
 					"(?,?,?,?,?,?);";
 			int result = 0;
 			Class.forName("com.mysql.cj.jdbc.Driver");	
-			try(Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/week5", "root", "1234");
+			try(Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/week5", "root", "happiness");
 			PreparedStatement ps = connection.prepareStatement(INSERT_MEMBER_SQL))
 			{
 				ps.setString(1, mp.getMemb_id());
@@ -32,14 +33,15 @@ public class MemberDaoClass_grpB {
 		}		
 			
 	}
-	public int membupdate(MemberPojo mm) throws ClassNotFoundException, SQLException {
+	public int membUpdate(MemberPojo mm) throws ClassNotFoundException, SQLException {
+		// Method membupdate() - Database logic is to update a member to the database.
 		{
 			String UPDATE_MEMBER_SQL ="UPDATE Member "
 					+ "SET Memb_name=?, Address=?, Memb_type=?, Memb_date=?, Expiry_date=? "
 					+ "WHERE Memb_id=?";
 			int result = 0;
 			Class.forName("com.mysql.cj.jdbc.Driver");	
-			try(Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/week5", "root", "1234");
+			try(Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/week5", "root", "happiness");
 			PreparedStatement ps = connection.prepareStatement(UPDATE_MEMBER_SQL))
 			{
 				ps.setString(1, mm.getMemb_name());
@@ -54,12 +56,13 @@ public class MemberDaoClass_grpB {
 		}		
 			
 	}
-	public int membdelete(MemberPojo mm) throws ClassNotFoundException, SQLException {
+	public int membDelete(MemberPojo mm) throws ClassNotFoundException, SQLException {
+		// Method membdelete() - Database logic is to delete a member from the database.
 		{
 			String DELETE_MEMBER_SQL ="DELETE FROM Member WHERE Memb_id=?";
 			int result = 0;
 			Class.forName("com.mysql.cj.jdbc.Driver");	
-			try(Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/week5", "root", "1234");
+			try(Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/week5", "root", "happiness");
 			PreparedStatement ps = connection.prepareStatement(DELETE_MEMBER_SQL))
 			{
 				ps.setString(1, mm.getMemb_id());

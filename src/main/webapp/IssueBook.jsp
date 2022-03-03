@@ -25,13 +25,14 @@ body {font-family: "Lato", sans-serif}
     <a href="index.jsp" class="w3-bar-item w3-button w3-padding-large">HOME</a>
     <a href="BookRegistration.jsp"  class="w3-bar-item w3-button w3-padding-large w3-hide-small">Add Book</a>
     <a href="UpdateBook.jsp" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Update Book</a>
-    <a href="DeleteBook.jsp" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Delete Book</a>  
+    <a href="DeleteBook.jsp" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Delete Book</a>
+    <a href="Borrow.jsp" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Borrow List</a>  
   </div>
 </div>
 <br><br>
 <div align="center">
 <h1> Issue Book  </h1>
-<!--JSP for Book updation in Database--> 
+<!--JSP for Book update in Database--> 
 
  <form action="<%= request.getContextPath() %>/BookServ" method="post">
    <table style="with: 80%">
@@ -45,15 +46,15 @@ body {font-family: "Lato", sans-serif}
     </tr>
     <tr>
      <td>Issue Date</td>
-     <td><input type="text" name="member_id" /></td>
+     <td><input type="text" name="issue_date" /></td>
     </tr>
     <tr>
      <td>Due Date</td>
-     <td><input type="text" name="member_id" /></td>
+     <td><input type="text" name="due_date" /></td>
     </tr>
     <tr>
      <td>Returned Date</td>
-     <td><input type="text" name="member_id" /></td>
+     <td><input type="text" name="returned_date" /></td>
     </tr>
     <tr>
     </table>

@@ -12,6 +12,10 @@ import com.abms.model.PublisherPojo;
 
 /**
  * Servlet implementation class PublisherServlet
+   Date - 03/02/2022
+   Author - Ayesha/Manvir
+   Description - Implementing addPublisher(),updatePublisher() to add and 
+                 update Publisher to the database respectively.
  */
 @WebServlet("/PublisherServ")
 public class PublisherServlet extends HttpServlet {

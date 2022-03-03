@@ -17,7 +17,6 @@ body {font-family: "Lato", sans-serif}
 
 </head>
 <body>
-
 <!-- Navbar -->
 <div class="w3-top">
   <div class="w3-bar w3-black w3-card">
@@ -25,20 +24,40 @@ body {font-family: "Lato", sans-serif}
     <a href="index.jsp" class="w3-bar-item w3-button w3-padding-large">HOME</a>
     <a href="Book.jsp"  class="w3-bar-item w3-button w3-padding-large w3-hide-small">Issue Book</a>
     <a href="BookRegistration.jsp" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Add Book</a>
+    <a href="UpdateBook.jsp" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Update Book</a>
     <a href="DeleteBook.jsp" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Delete Book</a>   
-  	<a href="Borrow.jsp" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Borrow List</a>
   </div>
-</div>
+</div><br><br><br>
+		<h2 align="center">
+			<font><strong>Display Borrow Book List</strong></font>
+		</h2>
+		<table align="center" cellpadding="5" cellspacing="5" border="1">
+			<tr>
 
+			</tr>
+			<tr bgcolor="#f58e0f">
+				<td><b>Book ID</b></td>
+				<td><b>Book Title</b></td>
+				<td><b>Issue Date</b></td>
+				<td><b>Due Date</b></td>
+				<td><b>Returned Date</b></td>
+				<td><b>Member ID</b></td>
+				<td><b>Member Name</b></td>
+			</tr>
+	<%! int i; %> 
+      <%-- retrieving JSON data from the servlet --%>
+	  <% for ( i = 0; i < 2; i++){%>
+            <tr bgcolor="#f5f50f">
 
-<div align="center"> <br>
-<h1> Borrow List </h1>
-<!--JSP for Book updation in Database--> 
-
- <form action="<%= request.getContextPath() %>/BookServ" method="post">
- 	<h3>Please click on the button below to display the Borrow List</h3>
- 	<input type="submit" name="action" value="Borrow List" />
- </form>
-</div>
+				<td><%=request.getAttribute("bookId" + i)%></td>
+				<td><%=request.getAttribute("bookTitle" + i)%></td>
+				<td><%=request.getAttribute("issueId" + i)%></td>
+				<td><%=request.getAttribute("dueDate" + i)%></td>
+				<td><%=request.getAttribute("returnedDate" + i)%></td>
+				<td><%=request.getAttribute("membId" + i)%></td>
+				<td><%=request.getAttribute("membName" + i)%></td>
+			</tr>
+      <%}%>
+      </table>
 </body>
 </html>

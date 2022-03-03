@@ -13,6 +13,10 @@ import com.abms.model.MemberPojo;
 
 /**
  * Servlet implementation class MemberServlet
+   Date - 03/02/2022
+   Author - Sathish Thimma Reddy/Ayesha
+   Description - Implementing registerMember(),updateMember(),deleteMember()
+                for adding, updating and deleting the member respectively.
  */
 @WebServlet("/MemberServ")
 public class MemberServlet extends HttpServlet {
@@ -77,7 +81,7 @@ public class MemberServlet extends HttpServlet {
         mp.setMemb_date(memberdate);
         mp.setExpiry_date(expirydate);
         try {
-            mdao.membereg(mp);
+            mdao.membeReg(mp);
             
         } catch (Exception e) {
             e.printStackTrace();
@@ -102,7 +106,7 @@ public class MemberServlet extends HttpServlet {
         mm.setMemb_date(memberdate);
         mm.setExpiry_date(expirydate);
         try {
-            mdao.membupdate(mm);
+            mdao.membUpdate(mm);
             
         } catch (Exception e) {
             e.printStackTrace();
@@ -116,7 +120,7 @@ public class MemberServlet extends HttpServlet {
 		mm.setMemb_id(memberId);
 		
 		try {
-            mdao.membdelete(mm);
+            mdao.membDelete(mm);
             
         } catch (Exception e) {
             e.printStackTrace();
